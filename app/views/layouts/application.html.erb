@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-    <link href="css/flat-icon/flaticon.css" rel="stylesheet" />
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
-    <link href="css/todos.css" rel="stylesheet" />
     <%= stylesheet_link_tag    "application" %>
-    <script src="js/vendor/modernizr.js"></script>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>

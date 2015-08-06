@@ -1,0 +1,26 @@
+.row
+  .large-2.medium-4.small-12.columns.top-part-no-padding
+    .logo-bg
+      = image_tag 'fitbot.png'
+      %i.fi-list.toggles{"data-toggle" => "hide"}
+  .large-10.medium-8.small-12.columns.top-menu
+    .row
+      .large-6.medium-6.small-12.columns
+        .row
+          .large-8.columns
+            %input#Text1.search-text{:placeholder => "Search", :type => "text"}/
+      .large-4.medium-6.small-12.columns.text-center
+        .row
+          .medium-3.small-3.columns
+            .notification
+              %i.fi-mail
+              %span.mail 4
+          .medium-3.small-3.columns
+            .notification
+              %i.fi-megaphone
+              %span.megaphone 5
+          .medium-3.small-3.columns
+            %img.top-bar-picture{:alt => "picture", :src => "img/32.jpg"}/
+          .medium-3.small-3.columns
+            = link_to '', logout_path, method: :delete , class:"fi-power power-off"
+    .clearfix

@@ -1,0 +1,74 @@
+.large-10.medium-12.small-12.columns.light-grey-bg-pattern
+  .row
+    .large-10.columns
+      .page-name
+        %h3.left Dashboard
+        .clearfix
+  #dashboard
+    .row
+      .large-3.medium-6.small-12.columns
+        .stats.border
+          .left
+            Steps
+            %h3 2,500
+          %i.fi-foot.right.sales
+          .clearfix
+      .large-3.medium-6.small-12.columns
+        .stats.border
+          .left
+            Calories
+            %h3 1,500
+          %i.fi-heart.right.orders
+          .clearfix
+      .large-3.medium-6.small-12.columns
+        .stats.border
+          .left
+            Miles
+            %h3 3.2
+          %i.fi-cloud.right.profit
+          .clearfix
+      .large-3.medium-6.small-12.columns
+        .stats.border
+          .left
+            Floors
+            %h3 190
+          %i.fi-elevator.right.user
+          .clearfix
+    %br
+    .row
+      .large-8.columns
+        .custom-panel
+          .custom-panel-heading
+            %h4 Percent to Goal
+          .custom-panel-body
+            #morris-area-chart
+              .progress.secondary.alert.success.radius.round
+                %span.meter{:style => "width: 25%"}
+                %br
+              %p Your are 25% of the way to your goal..step it up
+      .large-4.columns
+        .custom-panel
+          .custom-panel-heading
+            %h4 another box
+          .custom-panel-body
+            #morris-donut-chart Maybe some sort of message here or get rid of this box
+    %br/
+    .row
+      .large-6.columns
+        .custom-panel
+          .custom-panel-heading
+            %h4 Add Text Notification
+          .custom-panel-body
+            %label Mobile Phone
+            %input#Text2{:type => "text"}/
+            %a.button.tiny.radius.coral-bg.right{:href => "#"} Start Text Notifications
+            .clearfix
+      .large-6.columns
+        .custom-panel
+          .custom-panel-heading
+            %h4 Add Email Notification
+          .custom-panel-body
+            %label Email Address
+            %input#Text2{:type => "text"}/
+            %a.button.tiny.radius.coral-bg.right{:href => "#"} Start Email Notifications
+            .clearfix

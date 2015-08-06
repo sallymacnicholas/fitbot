@@ -1487,7 +1487,7 @@ $include-html-global-classes: $include-html-classes;
 
 @import 'foundation';
 .hero {
-  background: url("http://www.basketballismypassion.com/wp-content/uploads/2014/03/The-importance-of-Stretching.jpg") no-repeat center center;
+  background: url("sally-bg.jpg") no-repeat center center;
   background-size: cover;
 height: 100vh; }
 .hero:before {
@@ -1505,12 +1505,12 @@ opacity: .8; }
   top: 50%;
 transform: translateY(-50%); }
 .hero h1 {
-  color: #fff;
+  color: #fff !important;
   font-size: 1.5rem;
   line-height: 1.5em;
   letter-spacing: -0.025em;
   font-weight: 300;
-  text-align: center; }
+  text-align: center !important; }
 .hero a {
   text-align: center;
 }
@@ -1518,7 +1518,7 @@ transform: translateY(-50%); }
   color: #fff;
   line-height: 1.75em;
   font-weight: 200;
-  text-align: center;
+  text-align: center !important;
 margin-bottom: 2rem; }
 @media only screen and (min-width: 40.063em) {
   .hero .tech-img {
@@ -1539,6 +1539,7 @@ a.button {
   margin-right: auto;
   margin-top: 5%;
   max-width: 500px;
+  text-align: center;
 }
 
 .signup-panel {

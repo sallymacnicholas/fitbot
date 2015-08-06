@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  awake_time: 2015-08-06 09:09:30
+  sleep_time: 2015-08-06 09:09:30
+  steps: 1
+  user_id: 
+
+two:
+  awake_time: 2015-08-06 09:09:30
+  sleep_time: 2015-08-06 09:09:30
+  steps: 1
+  user_id: 
