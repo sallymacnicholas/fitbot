@@ -1,0 +1,12 @@
+:oauth:
+  :consumer_key: 9406c2e48b3c95b0bc1aa8af83fb4d44
+  :consumer_secret: 0b820d3e716254faeec3bf42c09c0618
+  :ssl: true
+  :token: 7e74761122aed7a72cd5dc0b6a4d232d
+  :user_id: 237ZVW
+
+
+#oauth:
+#  consumer_key: 9406c2e48b3c95b0bc1aa8af83fb4d44
+#  consumer_secret: 0b820d3e716254faeec3bf42c09c0618
+#  ssl: true

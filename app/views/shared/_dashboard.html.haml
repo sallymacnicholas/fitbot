@@ -10,28 +10,32 @@
         .stats.border
           .left
             Steps
-            %h3 2,500
+            %h3
+              = @client.steps
           %i.fi-foot.right.sales
           .clearfix
       .large-3.medium-6.small-12.columns
         .stats.border
           .left
             Calories
-            %h3 1,500
+            %h3
+              = @client.calories
           %i.fi-heart.right.orders
           .clearfix
       .large-3.medium-6.small-12.columns
         .stats.border
           .left
             Miles
-            %h3 3.2
+            %h3
+              = @client.miles
           %i.fi-cloud.right.profit
           .clearfix
       .large-3.medium-6.small-12.columns
         .stats.border
           .left
             Floors
-            %h3 190
+            %h3
+              = @client.floors
           %i.fi-elevator.right.user
           .clearfix
     %br

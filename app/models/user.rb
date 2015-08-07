@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
     user = User.find_or_create_by(provider: oauth.provider, uid: oauth.uid)
     user.username = oauth.info.full_name
     user.token = oauth.extra.access_token.params["oauth_token"]
+    user.secret = oauth.extra.access_token.params["oauth_token_secret"]
     user.provider = oauth.provider
     user.uid = oauth.uid
     user.save

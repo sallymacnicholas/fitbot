@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'omniauth-fitbit', '~> 1.0.5'
 gem 'haml-rails'
+gem 'fitgem'
+gem 'hurley'
 
 
 group :development, :test do

@@ -13,12 +13,17 @@
           %hr/
           .row
             .large-6.medium-12.small-12.columns
-              = image_tag "32.jpg", class:"profile-picture"
+              = image_tag "#{@client.avatar}", class:"profile-picture"
             .large-6.medium-12.small-12.columns
-              %p ruth@gmail.com
-              %p 989-983-7397
-              %p 27 Browns Bay New York
-              %p Developer
+              %p
+                Age:
+                = @client.age
+              %p
+                Gender:
+                = @client.gender.capitalize
+              %p
+                Birthday:
+                = @client.dob
         .ongoing-task.white-bg.border
           %h4 Goal Info
           %hr/
