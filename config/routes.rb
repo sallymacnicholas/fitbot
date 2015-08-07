@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'home#show'
 
-  get '/auth/fitbit', as: :login
+  get '/auth/fitbit', as: :login, to: 'sessions#new'
   get '/auth/fitbit/callback', to: 'sessions#create'
 
   resources :dashboard, only: [:index]

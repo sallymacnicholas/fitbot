@@ -16,7 +16,7 @@ gem 'omniauth-fitbit', '~> 1.0.5'
 gem 'haml-rails'
 gem 'fitgem'
 gem 'hurley'
-
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
