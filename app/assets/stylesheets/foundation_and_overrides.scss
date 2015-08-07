@@ -1487,7 +1487,7 @@ $include-html-global-classes: $include-html-classes;
 
 @import 'foundation';
 .hero {
-  background-image: image-url("sally-bg.jpg") no-repeat center center;
+  background-image: image-url("sally-bg.jpg");
   background-size: cover;
 height: 100vh; }
 .hero:before {
