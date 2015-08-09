@@ -10,6 +10,11 @@ class GoalsController < ApplicationController
     redirect_to profile_path(current_user)
   end
 
+  def update
+    @goal = Goal.find(params[:id])
+    @goal.update(goal_params)
+  end
+
   private
 
   def goal_params

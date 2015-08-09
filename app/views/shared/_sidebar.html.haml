@@ -6,6 +6,6 @@
       %li
         = link_to 'Profile', profile_path(current_user), class:"flaticon-profile4"
       %li
-        = link_to 'Notifications', notifications_path, class:"flaticon-businessman22"
+        = link_to 'Notifications', notification_path(current_user), class:"flaticon-businessman22"
       %li
         = link_to 'Friends', notifications_path, class:"flaticon-mailbox10"

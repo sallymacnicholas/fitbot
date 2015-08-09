@@ -45,17 +45,17 @@
           .custom-panel-heading
             %h4 Percent to Goal
           .custom-panel-body
-            #morris-area-chart
-              .progress.secondary.alert.success.radius.round
-                %span.meter{:style => "width: 25%"}
-                %br
-              %p Your are 25% of the way to your goal..step it up
+            .progress.secondary.alert.success.radius.round
+              %span.meter{:style => "width: 25%"}
+              %br
+            %p Your are 25% of the way to your goal..step it up
       .large-4.columns
         .custom-panel
           .custom-panel-heading
             %h4 another box
           .custom-panel-body
-            #morris-donut-chart Maybe some sort of message here or get rid of this box
+            %p
+              = @steps_needed_to_hit_goal
     %br/
     .row
       .large-6.columns

@@ -1,0 +1,19 @@
+.row.full-width.wrapper
+  .large-12.columns.content-bg
+    #top-menu
+      = render "shared/topmenu"
+    .row
+      = render "shared/sidebar"
+      .large-8.medium-6.columns
+        .profile-info
+          .white-bg
+            .tabs-content
+              #panel2-1.content.active
+                %h4.coral Set some goals here
+                %br/
+                = form_for(@notification) do |f|
+                  = f.label :"What time do you wake up?"
+                  = f.text_field :name
+                  = f.submit
+                  .clearfix
+

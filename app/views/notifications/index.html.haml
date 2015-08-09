@@ -1,0 +1,16 @@
+.large-8.medium-6.columns
+  .profile-info
+    .white-bg
+      .tabs-content
+        #panel2-1.content.active
+          %h4.coral Set some goals here
+          %br
+          = form_for(@notification) do |f|
+            = f.label :"What time do you wake up?"
+            = f.text_field :awake_time, placeholder: "Format: HH:MM"
+            = f.label :"What time do you go to sleep?"
+            = f.text_field :sleep_time, placeholder: "Format: HH:MM"
+            = f.label :"How many steps do you want to take a day?"
+            = f.text_field :steps
+            = f.submit
+          .clearfix
