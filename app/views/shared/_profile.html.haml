@@ -38,7 +38,8 @@
             - if current_user.goal
               = current_user.goal.steps
           %p
-            = current_user.goal.steps_needed
+            - if current_user.goal
+              = current_user.goal.steps_needed
       .large-8.medium-6.columns
         .profile-info
           .white-bg
