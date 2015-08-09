@@ -12,11 +12,11 @@ class FitbitService
   end
 
   def steps
-    client.activities_on_date('today')["summary"]["steps"]
+    client.activities_on_date(Time.now.strftime("%Y-%m-%d"))["summary"]["steps"]
   end
 
   def calories
-    client.activities_on_date('today')["summary"]["caloriesOut"]
+    client.activities_on_date(Time.now.strftime("%Y-%m-%d"))["summary"]["caloriesOut"]
   end
 
   def floors
