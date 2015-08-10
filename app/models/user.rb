@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
 
   def client
   end
+
+  def notification
+    NotificationMessage.new(self)
+  end
 end
