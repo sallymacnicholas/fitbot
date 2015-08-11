@@ -9,7 +9,14 @@ class NotificationMessage
     @client.messages.create from: '7205063550', to: "+18622029173", body: "Heyyyyyyyyyyyyy!"
   end
 
+  def send_message(current_user)
+    @client.messages.create from: '7205063550', to: current_user.notification.number, body: current_user.goal.message
+  end
+
   def steps_notification(current_user)
-    @client.messages.create from: '7205063550', to: "+17209364687", body: current_user.goal.steps_needed
+    binding.pry
+    if Time.now > current_user.goal.awake_time && Time.now < current_user.goal.sleep_time
+      send_message(current_user)
+    end
   end
 end

@@ -11,7 +11,7 @@
           .left
             Steps
             %h3
-              = @client.steps
+              = client.steps
           %i.fi-foot.right.sales
           .clearfix
       .large-3.medium-6.small-12.columns
@@ -19,7 +19,7 @@
           .left
             Calories
             %h3
-              = @client.calories
+              = client.calories
           %i.fi-heart.right.orders
           .clearfix
       .large-3.medium-6.small-12.columns
@@ -27,7 +27,7 @@
           .left
             Miles
             %h3
-              = @client.miles
+              = client.miles
           %i.fi-cloud.right.profit
           .clearfix
       .large-3.medium-6.small-12.columns
@@ -35,7 +35,7 @@
           .left
             Floors
             %h3
-              = @client.floors
+              = client.floors
           %i.fi-elevator.right.user
           .clearfix
     %br
@@ -43,19 +43,23 @@
       .large-8.columns
         .custom-panel
           .custom-panel-heading
-            %h4 Percent to Goal
+            %h4 Percent to Weekly Goal
           .custom-panel-body
             .progress.secondary.alert.success.radius.round
               %span.meter{:style => "width: 25%"}
               %br
             %p Your are 25% of the way to your goal..step it up
+            .clearfix
       .large-4.columns
         .custom-panel
           .custom-panel-heading
-            %h4 another box
+            %h4 Percent to Daily  Goal
           .custom-panel-body
-            %p
-              = @steps_needed_to_hit_goal
+            .progress.primary.alert.success.radius.round
+              %span.meter{:style => "width: 25%"}
+              %br
+            %p Your are 25% of the way to your goal..step it up
+            .clearfix
     %br/
     .row
       .large-6.columns

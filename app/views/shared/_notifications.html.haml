@@ -1,0 +1,81 @@
+.large-10.medium-12.small-12.columns.light-grey-bg-pattern
+  .row
+    .large-10.columns
+      .page-name
+        %h3.left Notifications
+        .clearfix
+  .row
+    .large-12.columns
+      .custom-panel
+        .custom-panel-heading
+          %h4 Add Text Notification
+        .custom-panel-body
+          - if current_user.notification.number
+            %p
+              You currently have text notifications set up.
+              To delete click here.
+          - else
+            %p
+              Text notifications will be sent every hour while
+              you are awake to tell you how many steps you need
+              to stay on track of your goal.
+            %label Enter Phone Number
+            %textarea
+            %br
+            %a.button.tiny.radius.coral-bg.right{:href => "#"} Send
+          .clearfix
+  #inbox
+    .row
+      .large-12.columns
+        .custom-panel.blue-bg
+          .custom-panel-heading{:style => "padding: 10px;"}
+            .row
+              .large-6.columns.text-center
+          .custom-panel-body
+            %br/
+            %table.width-100.custom-table.responsive
+              %tr
+                %td
+                  Notification 1
+                %td
+                  number of steps needed
+                %td
+                  Time
+                %td
+                  Date
+              %tr
+                %td
+                  Notification 1
+                %td
+                  number of steps needed
+                %td
+                  Time
+                %td
+                  Date
+              %tr
+                %td
+                  Notification 1
+                %td
+                  number of steps needed
+                %td
+                  Time
+                %td
+                  Date
+              %tr
+                %td
+                  Notification 1
+                %td
+                  number of steps needed
+                %td
+                  Time
+                %td
+                  Date
+              %tr
+                %td
+                  Notification 1
+                %td
+                  number of steps needed
+                %td
+                  Time
+                %td
+                  Date

@@ -89,7 +89,7 @@ a:hover, .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
 
 .logo-bg {
     background-color: #f16c65;
-    min-height: 70px;
+    min-height: 74px;
     padding-top: 10px;
 }
 
@@ -256,12 +256,12 @@ input[type="text"] {
 }
 
 .coral-bg {
-    background: #f16c65;
+    background: #f16c65 !important;
     color: #fff;
 }
 
     .coral-bg:hover {
-        background: #FC5850;
+        background: #fc3a2f;
     }
 
 .white-bg-btn {
@@ -697,6 +697,7 @@ input[type="text"] {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    display: inline-block;
 }
 
 .ongoing-task {

@@ -50,4 +50,8 @@ class FitbitService
   def dob
     client.user_info["user"]["dateOfBirth"]
   end
+
+  def badges
+    client.user_info["user"]["topBadges"]
+  end
 end
