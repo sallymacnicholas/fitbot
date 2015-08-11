@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   def client
     @client = FitbitService.new(current_user)
   end
+
+  def notifications_number
+    current_user.notification && current_user.notification.number
+  end
 end
