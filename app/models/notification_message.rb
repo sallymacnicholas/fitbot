@@ -14,7 +14,6 @@ class NotificationMessage
   end
 
   def steps_notification(current_user)
-    binding.pry
     if Time.now > current_user.goal.awake_time && Time.now < current_user.goal.sleep_time
       send_message(current_user)
     end
