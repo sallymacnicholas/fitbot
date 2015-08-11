@@ -1,18 +1,32 @@
 class GoalsController < ApplicationController
-  def new
+  def index
+    if current_user.goal
+      @goal = current_user.goal
+    else
+      @goal = Goal.new
+    end
+  end
 
+  def new
   end
 
   def create
     @goal = Goal.create(goal_params)
     @goal.user_id = current_user.id
     @goal.save
-    redirect_to profile_path(current_user)
+    redirect_to goals_path
   end
 
   def update
     @goal = Goal.find(params[:id])
     @goal.update(goal_params)
+    redirect_to goals_path
+  end
+
+  def destroy
+    @goal = Goal.find(params[:id])
+    @goal.destroy
+    redirect_to goals_path
   end
 
   private

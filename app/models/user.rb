@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_one :goal
+  has_one :notification
 
   def self.find_or_create_from_oauth(oauth)
     user = User.find_or_create_by(provider: oauth.provider, uid: oauth.uid)
@@ -10,12 +11,5 @@ class User < ActiveRecord::Base
     user.uid = oauth.uid
     user.save
     user
-  end
-
-  def client
-  end
-
-  def notification
-    NotificationMessage.new(self)
   end
 end
