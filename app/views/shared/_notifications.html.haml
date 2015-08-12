@@ -4,26 +4,7 @@
       .page-name
         %h3.left Notifications
         .clearfix
-  .row
-    .large-12.columns
-      .custom-panel
-        .custom-panel-heading
-          %h4 Add Text Notification
-        .custom-panel-body
-          - if notifications_number
-            %p
-              You currently have text notifications set up.
-              To delete click here.
-          - else
-            %p
-              Text notifications will be sent every hour while
-              you are awake to tell you how many steps you need
-              to stay on track of your goal.
-            %label Enter Phone Number
-            %textarea
-            %br
-            %a.button.tiny.radius.coral-bg.right{:href => "#"} Send
-          .clearfix
+  = render partial: "shared/add_notification", locals: { number: notifications_number, notification: @notification }
   #inbox
     .row
       .large-12.columns

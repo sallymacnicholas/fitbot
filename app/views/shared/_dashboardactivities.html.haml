@@ -1,0 +1,15 @@
+.large-3.medium-6.small-12.column
+  .stats.border
+    .left
+      = header
+      %h3
+        = data
+    - if header == "Steps"
+      %i.fi-foot.right.sales
+    - elsif header == "Calories"
+      %i.fi-heart.right.orders
+    - elsif header == "Miles"
+      %i.fi-cloud.right.profit
+    - else header == "Floors"
+      %i.fi-elevator.right.user
+    .clearfix

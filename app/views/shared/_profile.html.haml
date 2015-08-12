@@ -24,6 +24,8 @@
               %p
                 Birthday:
                 = client.dob
+              %p
+                = current_user.profile.formatted_awake_time
       .large-8.medium-12.small-12.columns
         .profile-item.white-bg.border
           %h4
@@ -34,6 +36,9 @@
             = badge["description"]
             %br
           .clearfix
+
+
+
 
 
 

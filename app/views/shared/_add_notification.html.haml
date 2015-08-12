@@ -1,0 +1,21 @@
+.row
+  .large-12.columns
+    .custom-panel
+      .custom-panel-heading
+        %h4 Add Text Notification
+      .custom-panel-body
+        - if number
+          %p
+            You currently have text notifications set up.
+            To delete click here.
+        - else
+          %p
+            Text notifications will be sent every hour while
+            you are awake to tell you how many steps you need
+            to stay on track of your goal.
+          = form_for(notification) do |f|
+            = f.label :"Enter Phone Number"
+            = f.text_area :number
+            %br
+            = f.submit "Submit", class:"button tiny right"
+        .clearfix

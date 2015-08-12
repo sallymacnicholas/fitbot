@@ -6,77 +6,16 @@
         .clearfix
   #dashboard
     .row
-      .large-3.medium-6.small-12.columns
-        .stats.border
-          .left
-            Steps
-            %h3
-              = client.steps
-          %i.fi-foot.right.sales
-          .clearfix
-      .large-3.medium-6.small-12.columns
-        .stats.border
-          .left
-            Calories
-            %h3
-              = client.calories
-          %i.fi-heart.right.orders
-          .clearfix
-      .large-3.medium-6.small-12.columns
-        .stats.border
-          .left
-            Miles
-            %h3
-              = client.miles
-          %i.fi-cloud.right.profit
-          .clearfix
-      .large-3.medium-6.small-12.columns
-        .stats.border
-          .left
-            Floors
-            %h3
-              = client.floors
-          %i.fi-elevator.right.user
-          .clearfix
+      = render partial: "shared/dashboardactivities", locals: { header: "Steps", data: client.steps }
+      = render partial: "shared/dashboardactivities", locals: { header: "Calories", data: client.calories, icon: "fi-foot" }
+      = render partial: "shared/dashboardactivities", locals: { header: "Miles", data: client.steps, icon: "fi-foot" }
+      = render partial: "shared/dashboardactivities", locals: { header: "Floors", data: client.floors, icon: "fi-foot" }
     %br
     .row
       .large-8.columns
-        .custom-panel
-          .custom-panel-heading
-            %h4 Percent to Weekly Goal
-          .custom-panel-body
-            .progress.secondary.alert.success.radius.round
-              %span.meter{:style => "width: 25%"}
-              %br
-            %p Your are 25% of the way to your goal..step it up
-            .clearfix
+        = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.weekly_percent_to_goal }
       .large-4.columns
-        .custom-panel
-          .custom-panel-heading
-            %h4 Percent to Daily  Goal
-          .custom-panel-body
-            .progress.primary.alert.success.radius.round
-              %span.meter{:style => "width: 25%"}
-              %br
-            %p Your are 25% of the way to your goal..step it up
-            .clearfix
+        = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.weekly_percent_to_goal }
     %br/
-    .row
-      .large-6.columns
-        .custom-panel
-          .custom-panel-heading
-            %h4 Add Text Notification
-          .custom-panel-body
-            %label Mobile Phone
-            %input#Text2{:type => "text"}/
-            %a.button.tiny.radius.coral-bg.right{:href => "#"} Start Text Notifications
-            .clearfix
-      .large-6.columns
-        .custom-panel
-          .custom-panel-heading
-            %h4 Add Email Notification
-          .custom-panel-body
-            %label Email Address
-            %input#Text2{:type => "text"}/
-            %a.button.tiny.radius.coral-bg.right{:href => "#"} Start Email Notifications
-            .clearfix
+  -if !notifications_number
+    = render partial: "shared/add_notification", locals: { number: notifications_number, notification: @notification }

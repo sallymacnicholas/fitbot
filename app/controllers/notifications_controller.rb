@@ -1,5 +1,6 @@
 class NotificationsController < ApplicationController
   def index
+    @notification = Notification.new
   end
 
   def new
@@ -20,6 +21,6 @@ class NotificationsController < ApplicationController
   private
 
   def note_params
-    params.require(:notification).permit(:name)
+    params.require(:notification).permit(:number)
   end
 end

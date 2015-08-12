@@ -4,5 +4,5 @@ task :send_notification => :environment do
   User.all.each do |user|
     NotificationMessage.new.steps_notification(user)
   end
-  puts "done."
+  puts "done. hoooorayyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 end

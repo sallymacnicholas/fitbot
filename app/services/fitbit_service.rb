@@ -11,47 +11,55 @@ class FitbitService
     )
   end
 
+  def summary
+    client.activities_on_date('today')["summary"]
+  end
+
   def steps
-    client.activities_on_date('today')["summary"]["steps"]
+    summary["steps"]
   end
 
   def calories
-    client.activities_on_date('today')["summary"]["caloriesOut"]
+    summary["caloriesOut"]
   end
 
   def floors
-    client.activities_on_date('today')["summary"]["floors"]
+    summary["floors"]
   end
 
   def miles
-    client.activities_on_date('today')["summary"]["distances"].first["distance"]
+    summary["distances"].first["distance"]
   end
 
   def age
-    client.user_info["user"]["age"]
+    user_info["age"]
   end
 
   def average_daily_steps
-    client.user_info["user"]["averageDailySteps"]
+    user_info["averageDailySteps"]
   end
 
   def gender
-    client.user_info["user"]["gender"]
+    user_info["gender"]
   end
 
   def avatar
-    client.user_info["user"]["avatar"]
+    user_info["avatar"]
   end
 
   def display_name
-    client.user_info["user"]["displayName"]
+    user_info["displayName"]
   end
 
   def dob
-    client.user_info["user"]["dateOfBirth"]
+    user_info["dateOfBirth"]
   end
 
   def badges
-    client.user_info["user"]["topBadges"]
+    user_info["topBadges"]
+  end
+
+  def user_info
+    client.user_info["user"]
   end
 end
