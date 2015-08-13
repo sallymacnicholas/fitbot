@@ -7,7 +7,8 @@
         - if notification_number
           %p
             You currently have text notifications set up.
-            To delete click here.
+            To delete click
+            = link_to 'here', notification_path(current_user.notification), method: :delete
         - else
           %p
             Text notifications will be sent every hour while

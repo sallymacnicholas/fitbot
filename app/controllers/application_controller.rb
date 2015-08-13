@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
   def notification_number
     current_user.notification && current_user.notification.number
   end
+
+  def user_awake_time
+    if current_user.profile
+      "#{current_user.profile.formatted_awake_time} - #{current_user.profile.formatted_sleep_time}"
+    end
+  end
 end

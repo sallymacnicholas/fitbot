@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/auth/fitbit/callback', to: 'sessions#create'
 
   resources :dashboard, only: [:index]
-  resources :notifications, only: [:index, :show, :new, :create]
+  resources :notifications
   resources :profile, only: [:show]
   resources :goals
 

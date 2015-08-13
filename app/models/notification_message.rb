@@ -6,7 +6,7 @@ class NotificationMessage
   end
 
   def welcome(current_user)
-    @client.messages.create from: '7205063550', to: current_user.notification.number, body: welcome_message
+    @client.messages.create from: '7205063550', to: current_user.notification.number, body: welcome_message(current_user)
   end
 
   def notification(current_user)
@@ -19,8 +19,8 @@ class NotificationMessage
     end
   end
 
-  def welcome_message
-    "Welcome, #{user.full_name} to Fitbot! Your notifications start now!"
+  def welcome_message(user)
+    "Welcome, #{user.username} to Fitbot! Your notifications start now!"
   end
 
   def notification_message(current_user_goals)
