@@ -12,11 +12,16 @@
       -else
         %h4.coral Set some goals here
       %br/
-      = form_for(@goal) do |f|
-        = f.label :"How many steps do you want to take a day?"
-        = f.text_field :steps
-        = f.submit class:"button tiny"
-      .clearfix
+      - if !current_user.profile
+        %p
+          Must set awake times first over
+          = link_to 'here', profiles_path
+      - else
+        = form_for(@goal) do |f|
+          = f.label :"How many steps do you want to take a day?"
+          = f.text_field :steps
+          = f.submit class:"button tiny"
+        .clearfix
 #profile
   .large-6.medium-6.columns
     .profile-item.white-bg.border

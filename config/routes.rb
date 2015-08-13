@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   resources :dashboard, only: [:index]
   resources :notifications
-  resources :profile, only: [:index, :new, :destroy, :create, :update]
+  resources :profiles
+  # resources :profiles
+  get '/profile', to: 'profiles#index'
   resources :goals
-
   delete '/logout', as: :logout, to: 'sessions#destroy'
 end

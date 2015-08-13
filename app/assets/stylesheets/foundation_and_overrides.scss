@@ -1511,6 +1511,10 @@ transform: translateY(-50%); }
   letter-spacing: -0.025em;
   font-weight: 300;
   text-align: center !important; }
+.hero h6 {
+  text-align: center !important;
+  color: #fff !important;
+}
 .hero a {
   text-align: center;
 }
@@ -1528,6 +1532,9 @@ margin-bottom: 2rem; }
     padding-top: 4.5rem;
     text-align: right;
   font-size: 2.5rem; }
+  .hero h6 {
+    text-align: center;
+  }
   .hero p {
 text-align: right; } }
 a.button {

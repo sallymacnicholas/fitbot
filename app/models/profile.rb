@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+  validates :awake_time, presence: true
   belongs_to :user
 
   def formatted_awake_time

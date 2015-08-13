@@ -1,6 +1,10 @@
 class ProfilesController < ApplicationController
   def index
-    @profile = Profile.new
+    if current_user.profile
+      @profile = current_user.profile
+    else
+      @profile = Profile.new
+    end
   end
 
   def new
@@ -11,7 +15,13 @@ class ProfilesController < ApplicationController
     @profile = Profile.create(profile_params)
     @profile.user_id = current_user.id
     @profile.save
-    redirect_to profile_index_path
+    redirect_to profiles_path
+  end
+
+  def update
+    @profile = Profile.find(params[:id])
+    @profile.update(profile_params)
+    redirect_to profiles_path
   end
 
   private

@@ -10,7 +10,7 @@ class NotificationsController < ApplicationController
     @notification = Notification.create(note_params)
     @notification.user_id = current_user.id
     @notification.save
-    redirect_to profile_path(current_user)
+    redirect_to notifications_path
     NotificationMessage.new.welcome(current_user)
   end
 

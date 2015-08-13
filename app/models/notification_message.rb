@@ -14,9 +14,7 @@ class NotificationMessage
   end
 
   def steps_notification(current_user)
-    if Time.now.hour.between?(current_user.profile.awake_time.hour, current_user.profile.sleep_time.hour)
-      notification(current_user)
-    end
+    notification(current_user)
   end
 
   def welcome_message(user)

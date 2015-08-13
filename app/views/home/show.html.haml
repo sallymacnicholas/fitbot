@@ -4,10 +4,14 @@
       %h1
         meet your goals with
         %strong fitbot
-      %p the app that notifies you of your failures
+      %h6 the app that notifies you of your failures
     .center.row
       %section
         %p.title{"data-section-title" => ""}
         .content{"data-section-content" => ""}
+          %p
+            login to receive hourly text notifications that
+            tell you how many steps you need to stay on
+            track of your daily goals
           .row
             = link_to "Login with Fitbit", login_path, class: "button"

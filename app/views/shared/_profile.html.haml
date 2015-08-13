@@ -4,48 +4,49 @@
       .page-name
         %h3.left Profile
         .clearfix
+#profile
+  .large-4.columns
+    .profile-item.white-bg.border
+      %h4
+        = current_user.username.capitalize
+      %hr/
+      %p
+        Age:
+        = client.age
+      %p
+        Gender:
+        = client.gender.capitalize
+      %p
+        Birthday:
+        = client.dob
+      -if current_user.profile
+        %p
+          Awake Times:
+          = current_user.profile.awake_times
+      - if current_user.profile
+        %h4.coral Update Awake Times
+      - else
+        %h4.coral Set your Awake Times
+        %hr
+      = form_for @profile do |f|
+        = f.label :"What time do you wake up?"
+        = f.text_area :awake_time, placeholder: "Format military time HH:MM"
+        = f.label :"What time do you go to sleep?"
+        = f.text_area :sleep_time, placeholder: "Format military time HH:MM"
+        = f.submit 'submit', class:"button tiny"
+    .clearfix
   #profile
-    .row
-      .large-4.medium-6.columns
-        .profile-item.white-bg.border
-          %h4
-            = current_user.username.capitalize
-          %hr/
-          .row
-            .large-6.medium-12.small-12.columns
-              = image_tag "#{client.avatar}", class:"profile-picture"
-            .large-6.medium-12.small-12.columns
-              %p
-                Age:
-                = client.age
-              %p
-                Gender:
-                = client.gender.capitalize
-              %p
-                Birthday:
-                = client.dob
-            -if current_user.profile
-              %p
-                Awake Times:
-                = current_user.profile.awake_times
-            -else
-              %br/
-              = form_for @profile, url: profile_path do |f|
-                = f.label :"What time do you wake up?"
-                = f.text_field :awake_times
-                = f.submit
-              .clearfix
-      .large-8.medium-12.small-12.columns
-        .profile-item.white-bg.border
-          %h4
-            Top Badges
-          %hr/
-          - client.badges.each do |badge|
-            = image_tag badge["image100px"], class:"profile-picture"
-            = badge["description"]
-
-            %br
-          .clearfix
+    .large-6.columns
+      .profile-item.white-bg.border
+        %h4
+          Top Badges
+        %hr/
+        - client.badges.each do |badge|
+          = image_tag badge["image100px"], class:"profile-picture"
+          = badge["description"]
+          %br
+        .clearfix
+        .clearfix
 
 
 
