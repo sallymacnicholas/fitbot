@@ -15,5 +15,5 @@
       .large-8.columns
         = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.weekly_percent_to_goal }
       .large-4.columns
-        = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.weekly_percent_to_goal }
+        = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.daily_percent_to_goal }
     %br/
