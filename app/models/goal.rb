@@ -21,10 +21,6 @@ class Goal < ActiveRecord::Base
     (Time.now.end_of_hour + 1).strftime("%I:%M%p")
   end
 
-  def message
-    "You need to get in #{steps_needed} more steps before #{next_hour} to stay on track with your goal of #{steps} per day"
-  end
-
   def weekly_percent_to_goal
     ((client.steps * 1.00)/((steps * 7) * 1.00)).to_i
   end

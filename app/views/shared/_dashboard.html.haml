@@ -7,9 +7,9 @@
   #dashboard
     .row
       = render partial: "shared/dashboardactivities", locals: { header: "Steps", data: client.steps }
-      = render partial: "shared/dashboardactivities", locals: { header: "Calories", data: client.calories, icon: "fi-foot" }
-      = render partial: "shared/dashboardactivities", locals: { header: "Miles", data: client.steps, icon: "fi-foot" }
-      = render partial: "shared/dashboardactivities", locals: { header: "Floors", data: client.floors, icon: "fi-foot" }
+      = render partial: "shared/dashboardactivities", locals: { header: "Calories", data: client.calories }
+      = render partial: "shared/dashboardactivities", locals: { header: "Miles", data: client.steps }
+      = render partial: "shared/dashboardactivities", locals: { header: "Floors", data: client.floors }
     %br
     .row
       .large-8.columns
@@ -17,5 +17,3 @@
       .large-4.columns
         = render partial: "shared/percent_to_goal", locals: { header: "Percent to Weekly Goal", percentage: current_user.goal.weekly_percent_to_goal }
     %br/
-  -if !notifications_number
-    = render partial: "shared/add_notification", locals: { number: notifications_number, notification: @notification }

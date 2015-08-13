@@ -4,7 +4,11 @@
       .page-name
         %h3.left Notifications
         .clearfix
-  = render partial: "shared/add_notification", locals: { number: notifications_number, notification: @notification }
+  .row
+  - if !notification_number
+    = render partial: "shared/add_notification", locals: { notification: @notification }
+  - else
+    = render partial: "shared/add_notification", locals: { notification_number: notification_number, notification: @notification }
   #inbox
     .row
       .large-12.columns

@@ -15,7 +15,7 @@ class NotificationsController < ApplicationController
     @notification.user_id = current_user.id
     @notification.save
     redirect_to profile_path(current_user)
-    NotificationMessage.new.steps_notification(current_user)
+    NotificationMessage.new.welcome(current_user)
   end
 
   private

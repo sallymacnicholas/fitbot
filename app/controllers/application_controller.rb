@@ -6,13 +6,13 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
-  helper_method :current_user, :client, :notifications_number
+  helper_method :current_user, :client, :notification_number
 
   def client
     @client = FitbitService.new(current_user)
   end
 
-  def notifications_number
+  def notification_number
     current_user.notification && current_user.notification.number
   end
 end
