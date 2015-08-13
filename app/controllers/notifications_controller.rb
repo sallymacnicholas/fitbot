@@ -6,10 +6,6 @@ class NotificationsController < ApplicationController
   def new
   end
 
-  def show
-    @notification = Notification.new
-  end
-
   def create
     @notification = Notification.create(note_params)
     @notification.user_id = current_user.id

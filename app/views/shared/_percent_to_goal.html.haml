@@ -4,7 +4,14 @@
       = header
   .custom-panel-body
     .progress.secondary.alert.success.radius.round
+    - if current_user.goal
       %span.meter{:style => "width: #{percentage}% "}
       %br
-    %p Your are #{percentage}% of the way to your goal..step it up
+      %p Your are #{percentage}% of the way to your goal..step it up
+    - else
+      %span.meter{:style => "width: 0% "}
+      %br
+      %p
+        You have no goals set. Set some
+        = link_to 'here', goals_path
     .clearfix

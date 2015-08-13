@@ -73,4 +73,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
 end

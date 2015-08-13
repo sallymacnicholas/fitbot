@@ -8,4 +8,8 @@ class Profile < ActiveRecord::Base
   def formatted_sleep_time
     sleep_time.strftime("%I:%M%p")
   end
+
+  def awake_times
+    "#{formatted_awake_time} - #{formatted_sleep_time}"
+  end
 end

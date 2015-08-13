@@ -1,4 +1,5 @@
 class Goal < ActiveRecord::Base
+  validates :steps, presence: true
   belongs_to :user
 
   def steps_needed

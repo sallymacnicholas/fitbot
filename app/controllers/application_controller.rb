@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def user_awake_time
     if current_user.profile
-      "#{current_user.profile.formatted_awake_time} - #{current_user.profile.formatted_sleep_time}"
+
     end
   end
 end

@@ -24,8 +24,17 @@
               %p
                 Birthday:
                 = client.dob
+            -if current_user.profile
               %p
-                = user_awake_time
+                Awake Times:
+                = current_user.profile.awake_times
+            -else
+              %br/
+              = form_for @profile, url: profile_path do |f|
+                = f.label :"What time do you wake up?"
+                = f.text_field :awake_times
+                = f.submit
+              .clearfix
       .large-8.medium-12.small-12.columns
         .profile-item.white-bg.border
           %h4
@@ -34,6 +43,7 @@
           - client.badges.each do |badge|
             = image_tag badge["image100px"], class:"profile-picture"
             = badge["description"]
+
             %br
           .clearfix
 
