@@ -5,62 +5,18 @@
         %h3.left Notifications
         .clearfix
   .row
-  - if !notification_number
+  - if !awake_and_goals
+    .row
+    .large-12.columns
+      .custom-panel
+        .custom-panel-heading
+          %h4 Add Text Notification
+        .custom-panel-body
+          %p You first need to set awake times and goals. Start
+          = link_to 'here', profiles_path
+  - elsif !notification_number
     = render partial: "shared/add_notification", locals: { notification: @notification }
   - else
     = render partial: "shared/add_notification", locals: { notification_number: notification_number, notification: @notification }
   #inbox
-    .row
-      .large-12.columns
-        .custom-panel.blue-bg
-          .custom-panel-heading{:style => "padding: 10px;"}
-            .row
-              .large-6.columns.text-center
-          .custom-panel-body
-            %br/
-            %table.width-100.custom-table.responsive
-              %tr
-                %td
-                  Notification 1
-                %td
-                  number of steps needed
-                %td
-                  Time
-                %td
-                  Date
-              %tr
-                %td
-                  Notification 1
-                %td
-                  number of steps needed
-                %td
-                  Time
-                %td
-                  Date
-              %tr
-                %td
-                  Notification 1
-                %td
-                  number of steps needed
-                %td
-                  Time
-                %td
-                  Date
-              %tr
-                %td
-                  Notification 1
-                %td
-                  number of steps needed
-                %td
-                  Time
-                %td
-                  Date
-              %tr
-                %td
-                  Notification 1
-                %td
-                  number of steps needed
-                %td
-                  Time
-                %td
-                  Date
+    = render partial: "shared/notification_messages", locals: { messages: @messages.last(5) }

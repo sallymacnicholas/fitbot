@@ -15,6 +15,7 @@ class NotificationMessage
 
   def steps_notification(current_user)
     notification(current_user)
+    Message.create steps_needed: current_user.goal.steps_needed, user_id: current_user.id
   end
 
   def welcome_message(user)

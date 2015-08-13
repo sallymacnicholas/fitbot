@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_one :goal
   has_one :notification
   has_one :profile
+  has_many :messages
 
   def self.find_or_create_from_oauth(oauth)
     user = User.find_or_create_by(provider: oauth.provider, uid: oauth.uid)

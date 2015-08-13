@@ -1,0 +1,30 @@
+.row
+  .large-12.columns
+    .custom-panel.blue-bg
+      .custom-panel-heading{:style => "padding: 10px;"}
+        .row
+          .large-6.columns.text-center
+            .large-4.columns
+              Recent Notifications
+      .custom-panel-body
+        %br/
+        %table.width-100.custom-table.responsive
+          %tr
+            %th
+              Message ID
+            %th
+              Steps Needed
+            %th
+              Time
+            %th
+              Date
+          - messages.each do |message|
+            %tr
+              %td
+                = message.id
+              %td
+                = message.steps_needed
+              %td
+                = message.created_at.strftime("%I:%M:%p")
+              %td
+                = message.created_at.strftime("%d:%m:%Y")
