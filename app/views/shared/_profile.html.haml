@@ -7,7 +7,7 @@
 #profile
   .large-4.columns
     .profile-item.white-bg.border
-      %h4
+      %h4.coral
         = current_user.username.capitalize
       %hr/
       %p
@@ -38,7 +38,7 @@
   #profile
     .large-6.columns
       .profile-item.white-bg.border
-        %h4
+        %h4.coral
           Top Badges
         %hr/
         - client.badges.each do |badge|

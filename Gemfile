@@ -18,8 +18,8 @@ gem 'fitgem'
 gem 'hurley'
 gem 'rails_12factor'
 gem 'twilio-ruby'
-gem 'skylight'
 gem 'simplecov'
+gem 'skylight', '~> 0.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
