@@ -1,6 +1,7 @@
 class Goal < ActiveRecord::Base
   validates :steps, presence: true
   belongs_to :user
+  attr_reader :client
 
   def steps_needed
     steps_should_have_taken - client.steps
@@ -31,7 +32,7 @@ class Goal < ActiveRecord::Base
   end
 
   def client
-    FitbitService.new(user)
+    @client ||= FitbitService.new(user)
   end
 
   def now_hour
