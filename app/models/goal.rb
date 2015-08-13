@@ -22,7 +22,7 @@ class Goal < ActiveRecord::Base
   end
 
   def weekly_percent_to_goal
-    ((client.steps.to_f/(steps * 7).to_f)) * 100).to_i
+    ((client.steps.to_f/(steps * 7).to_f) * 100).to_i
   end
 
   def daily_percent_to_goal
