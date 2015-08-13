@@ -18,13 +18,20 @@
               Time
             %th
               Date
-          - messages.each do |message|
+          -if messages == nil
             %tr
               %td
-                = message.id
               %td
-                = message.steps_needed
               %td
-                = message.created_at.strftime("%I:%M:%p")
               %td
-                = message.created_at.strftime("%d:%m:%Y")
+          -else
+            - messages.each do |message|
+              %tr
+                %td
+                  = message.id
+                %td
+                  = message.steps_needed
+                %td
+                  = message.created_at.strftime("%I:%M:%p")
+                %td
+                  = message.created_at.strftime("%d:%m:%Y")
