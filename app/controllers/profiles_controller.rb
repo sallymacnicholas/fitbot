@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @profile = Profile.create(profile_params)
+    @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.save
     redirect_to profiles_path
