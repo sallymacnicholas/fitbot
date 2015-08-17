@@ -30,3 +30,4 @@ def stub_omniauth_user
 end
 
 
+

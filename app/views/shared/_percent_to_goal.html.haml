@@ -6,11 +6,9 @@
     .progress.secondary.alert.success.radius.round
       - if current_user.goal
         %span.meter{:style => "width: #{percentage}%"}
-        %br
-        Your are #{percentage}% of the way to your goal..step it up
+        You are #{percentage}% of the way to your goal..step it up
       - else
-        %span.meter{:style => "width: 33%"}
-        %br
+        %span.meter{:style => "width: 0%"}
         You have no goals set. Set some
         = link_to 'here', goals_path
-      .clearfix
+  .clearfix

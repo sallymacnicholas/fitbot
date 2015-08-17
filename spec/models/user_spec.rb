@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Goal, type: :model do
-  let(:user) { User.create(username: "sally", uid: '123456', token: '222', secret:"111", provider:"fitbot") }
-
-  before(:each) do
-    user
-  end
+  let!(:user) { User.create(username: "sally",
+                           uid: '123456',
+                           token: '222',
+                           secret:"111",
+                           provider:"fitbot") }
 
   it 'is valid' do
     expect(user).to be_valid

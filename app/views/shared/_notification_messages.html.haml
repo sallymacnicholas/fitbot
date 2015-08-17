@@ -19,11 +19,7 @@
             %th
               Date
           -if messages == nil
-            %tr
-              %td
-              %td
-              %td
-              %td
+            You haven't received any notification messages yet
           -else
             - messages.each do |message|
               %tr

@@ -1,16 +1,21 @@
 require 'rails_helper'
 
 RSpec.describe Goal, type: :model do
-  let(:user) { User.create(username: "sally", uid: '123456', token: '1111', secret:"12345", provider:"fitbot") }
-  let(:goal) { Goal.create(steps: 10000, user_id: user.id)}
-  let(:profile) { Profile.create(awake_time:"04:00", sleep_time:"21:00", user_id: user.id)}
-  let(:message) { Message.create steps_needed: 1000, user_id: user.id }
+  let!(:user) { User.create(username: "sally",
+                            uid: '123456',
+                            token: '1111',
+                            secret:"12345",
+                            provider:"fitbot") }
 
-  before(:each) do
-    user
-    goal
-    profile
-  end
+  let!(:goal) { Goal.create(steps: 10000,
+                            user_id: user.id)}
+
+  let!(:profile) { Profile.create(awake_time:"04:00",
+                                  sleep_time:"21:00",
+                                  user_id: user.id)}
+
+  let!(:message) { Message.create(steps_needed: 1000,
+                                  user_id: user.id)}
 
   it 'is valid' do
     expect(message).to be_valid

@@ -17,7 +17,7 @@
             %p
               = current_user.username
           .medium-3.small-4.columns
-            = image_tag client.avatar, class:"top-bar-picture"
+            -#= image_tag client.avatar, class:"top-bar-picture"
           .medium-3.small-3.columns
-            = link_to '', logout_path, method: :delete , class:"fi-power power-off"
+            = link_to '', logout_path, method: :delete , class:"fi-power power-off", id:"logout"
     .clearfix
