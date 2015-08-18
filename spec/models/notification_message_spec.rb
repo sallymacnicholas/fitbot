@@ -17,6 +17,8 @@ RSpec.describe Notification, type: :model do
   let!(:notification) { Notification.create(number: "7209364687", user_id: user.id)}
 
   it 'does something' do
+    expect(Message.all.count).to eq(0)
     NotificationMessage.new.steps_notification(user)
+    expect(Message.all.count).to eq(1)
   end
 end
