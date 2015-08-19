@@ -15,7 +15,7 @@ RSpec.describe Goal, type: :model do
                                   user_id: user.id)}
   it 'tests goals stuff' do
     stub_omniauth_user
-    VCR.use_cassette 'goals' do
+    VCR.use_cassette('goals', :record => :once) do
       response = FitbitService.new(user)
       something_else ||= Fitgem::Client.new(
       :consumer_key => ENV["consumer_key"],
@@ -26,7 +26,7 @@ RSpec.describe Goal, type: :model do
       allow_any_instance_of(Goal).to receive(:client).and_return(response)
       allow_any_instance_of(Goal).to receive(:next_hour).and_return("05:00PM")
       allow_any_instance_of(Goal).to receive(:hours_since_awake).and_return(8)
-      expect(goal.steps_needed).to eq(1360)
+      expect(goal.steps_needed).to eq(5292)
     end
   end
 
