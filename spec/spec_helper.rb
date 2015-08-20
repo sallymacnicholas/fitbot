@@ -1,5 +1,8 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/spec/'
+  add_filter '/config/'
+end
 require 'database_cleaner'
 require 'webmock/rspec'
 require 'vcr'
