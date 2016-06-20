@@ -12,6 +12,7 @@ class NotificationMessage
   def notification(current_user)
     @client.messages.create from: '7205063550', to: current_user.notification.number, body: notification_message(current_user.goal)
   end
+  
 
   def steps_notification(current_user)
     notification(current_user)

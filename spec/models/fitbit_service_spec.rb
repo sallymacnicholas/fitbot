@@ -1,4 +1,4 @@
-require 'rails_helper'
+require 'rails_helper
 
 RSpec.describe FitbitService, type: :model do
   let!(:user) { User.create(username: "sally",
