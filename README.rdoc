@@ -1,1 +1,1 @@
-You can visit the live site at https://protected-tor-9723.herokuapp.com
+You can visit the live site at https://fitbotapp.herokuapp.com

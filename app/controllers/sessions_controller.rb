@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_or_create_from_oauth(oauth)
 
+    binding.pry
     if @user
       session[:user_id] = @user.id
       redirect_to dashboard_index_path
